@@ -5,7 +5,7 @@ import {useState} from 'react';
 
 function AddToCart(props) {
    
-   const [numero, setNumero] = useState(99);
+   const [numero, setNumero] = useState(0);
 
    function decreaseHandler(){
       setNumero(numero-1)
@@ -16,17 +16,17 @@ function AddToCart(props) {
    }
 
    return (
-      <div className="PopinOverlay popin-overlay">
-         <button className="Close close" onclick="closePopin">×</button>
+      <div className="">
+         <button>×</button>
          <img src={props.photo}/>
-         <h2 className="PopinTitle popin-title">{props.name}</h2>
-         <p className="PopinPrice popin-price">{props.price}</p>
-         <div className="QuantitySelector">
+         <h2 className="">{props.name}</h2>
+         <p className="">{props.price}</p>
+         <div className="">
                <button className="Decrease" onClick={decreaseHandler}>-</button>
                <span>{numero}</span>
                <button className="Increase" onClick={increaseHandler}>+</button>
          </div>
-         <button className="ButtonAddToCart">Ajouter au panier</button>
+         <button className="">Ajouter au panier</button>
       </div> );
 }
 export default AddToCart

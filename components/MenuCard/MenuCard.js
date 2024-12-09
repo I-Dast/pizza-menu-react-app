@@ -8,7 +8,7 @@ function MenuCard (props){
             <h2>{props.name}</h2>
             <p className="Description description">{props.description}</p>
             <p className="Price price">{props.price}</p>
-            <ButtonOrder></ButtonOrder>
+            
     </div> 
         
    );
